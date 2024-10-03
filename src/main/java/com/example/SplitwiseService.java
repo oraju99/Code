@@ -16,8 +16,6 @@ public class SplitwiseService {
         balances.put(userId, new HashMap<>());
     }
 
-    // Logic - If user A gives money M to user B then I'll store it as +M in user A's balance sheet and
-    // -M in user B's balance sheet
     public void addExpense(Expense expense) {
         for (String moneryReceiver: expense.getParticipants()) {
             if (expense.getSplitStrategyEnum().equals(SplitStrategyEnum.EQUAL)) {
